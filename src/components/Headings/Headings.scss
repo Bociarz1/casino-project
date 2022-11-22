@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One+Outline&family=Sriracha&display=swap');
+
+@keyframes flicker {
+  50% {
+    color: white;
+    filter: saturate(200%) hue-rotate(20deg);
+  }
+}
+
+.app-headings {
+  margin: 9.7vh 0 5.8vh 0;
+  text-align: center;
+  --color1: orangered;
+--color2: firebrick;
+--color3: maroon;
+--color4: darkred;
+  
+  h1 {
+    font-size: 5.8vh;
+    z-index: 1;
+    --interval: 1s;
+    display: block;
+    text-shadow: 
+      0 0 10px var(--color1),
+      0 0 20px var(--color2),
+      0 0 40px var(--color3),
+      0 0 80px var(--color4);
+    will-change: filter, color;
+    filter: saturate(60%);
+    animation: flicker steps(100) var(--interval) 1s infinite;
+    color: tomato;
+
+    font-family: 'Kumar One Outline', cursive;
+    }
+    p {
+      font-size: 2.5vh;
+      margin: 0 auto;
+      width: 80vw;
+      color: white;
+      --color1: orangered;
+      --color2: firebrick;
+      --color3: maroon;
+      --color4: darkred;
+      
+      --interval: 5s;
+      display: block;
+      text-shadow: 
+        0 0 10px var(--color1),
+        0 0 20px var(--color2),
+        0 0 40px var(--color3),
+        0 0 80px var(--color4);
+      will-change: filter, color;
+      filter: saturate(60%);
+      animation: flicker steps(100) var(--interval) 1s infinite;
+      background-color: rgba($color: rgb(30, 29, 29), $alpha: 0.25);
+      font-family: 'Sriracha', cursive;
+    }
+  }
