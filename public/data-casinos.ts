@@ -5,7 +5,11 @@ export const dataCasinos = [
     url: 'https://spincityl.com/?trackCode=aff_022db3_31#Register',
     grade: '4,7',
     bonus: '100% depozytu + 100 FS w grze Book of jungle',
-    payment: ['blik','visa']
+    payment: {
+      blik: true,
+      paypal: true,
+      skycash: true
+    }
   },
   {
     id: '2',
