@@ -6,7 +6,7 @@ function Casinos() {
   return (
     <ul className="app-casinos">
       {dataCasinos.map((item) => (
-        <CasinoCard key={item.id} id={item.id} name={item.name} url={item.url} />
+        <CasinoCard data={item} key={item.id}/>
       ))}
     </ul>
   );

@@ -1,4 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Sriracha&family=Staatliches&family=Tourney&display=swap');
+
 .app {
-  max-width: 100%;
+  --fontRobotoMono: 'Roboto Mono', monospace;
+  --fontSriracha: 'Sriracha', cursive;
+  --fontStaatliches: 'Staatliches', cursive;
+  --fontTourney: 'Tourney', cursive;
+
+  --color1: orangered;
+  --color2: firebrick;
+  --color3: maroon;
+  --color4: darkred;
+  
+ max-width: 100%;
   min-height: 100vh;
 }

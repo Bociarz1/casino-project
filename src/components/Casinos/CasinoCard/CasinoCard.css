@@ -1,17 +1,97 @@
-@import url("https://fonts.googleapis.com/css2?family=Kumar+One+Outline&family=Sriracha&display=swap");
 .app-casinos-casinocard {
-  width: 40%;
-  background-color: white;
+  width: 95%;
   margin: 4vh auto;
   padding: 2vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  font-size: 2vh;
+  font-family: "Sriracha", cursive;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.app-casinos-casinocard svg {
+  width: 2.5vh;
+  height: 2.5vh;
 }
 .app-casinos-casinocard .app-casinos-casinocard-avatar {
-  width: 100%;
-}
-.app-casinos-casinocard .app-casinos-casinocard-payments {
   display: flex;
+  justify-content: center;
+  padding-bottom: 2vh;
+}
+.app-casinos-casinocard .app-casinos-casinocard-avatar img {
+  width: 70%;
+}
+.app-casinos-casinocard .app-casinos-casinocard-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vh;
+}
+.app-casinos-casinocard .app-casinos-casinocard-info .app-casinos-casinocard-info-stars div:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+}
+.app-casinos-casinocard .app-casinos-casinocard-info .app-casinos-casinocard-info-stars .app-casinos-casinocard-info-stars-heading {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+.app-casinos-casinocard .app-casinos-casinocard-info .app-casinos-casinocard-info-stars .app-casinos-casinocard-info-stars-heading span {
+  font-size: 1.5vh;
+}
+.app-casinos-casinocard .app-casinos-casinocard-info .app-casinos-casinocard-info-stars .app-casinos-casinocard-info-stars-main {
+  font-size: "2vh";
+}
+.app-casinos-casinocard .app-casinos-casinocard-info .app-casinos-casinocard-info-stars .app-casinos-casinocard-info-stars-main .app-casinos-casinocard-info-stars-main-rating {
+  font-family: var(--fontRobotoMono);
+  font-weight: 400;
+  font-size: 1.5vh;
+  min-width: 50%;
+  max-width: 50%;
+}
+.app-casinos-casinocard .app-casinos-casinocard-info .app-casinos-casinocard-info-bonus .app-casinos-casinocard-info-bonus-heading {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+.app-casinos-casinocard .app-casinos-casinocard-info .app-casinos-casinocard-info-bonus .app-casinos-casinocard-info-bonus-heading span {
+  font-size: 1.5vh;
+}
+.app-casinos-casinocard .app-casinos-casinocard-info .app-casinos-casinocard-info-bonus .app-casinos-casinocard-info-bonus-main {
+  text-align: center;
+  font-size: 2.5vh;
+}
+.app-casinos-casinocard .app-casinos-casinocard-info .app-casinos-casinocard-info-bonus .app-casinos-casinocard-info-bonus-main ul {
+  font-family: var(--fontStaatliches);
+  list-style-type: none;
+}
+.app-casinos-casinocard .app-casinos-casinocard-info .app-casinos-casinocard-info-payments .app-casinos-casinocard-info-payments-heading {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+.app-casinos-casinocard .app-casinos-casinocard-info .app-casinos-casinocard-info-payments .app-casinos-casinocard-info-payments-heading span {
+  font-size: 1.5vh;
+}
+.app-casinos-casinocard .app-casinos-casinocard-info .app-casinos-casinocard-info-payments .app-casinos-casinocard-info-payments-icons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1vh;
+}
+.app-casinos-casinocard .app-casinos-casinocard-info .app-casinos-casinocard-button {
+  width: 100%;
+  border: solid black 1px;
+  border-radius: 2rem;
+  padding: 4%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  font-size: 3.2vh;
+  font-family: var(--fontStaatliches);
+  letter-spacing: 0.2rem;
+  background-color: #7ca318;
+  background-image: linear-gradient(to right, #c8cd45, #d4380c);
+  --interval: 1s;
+  -webkit-animation: flicker steps(100) var(--interval) 1s infinite;
+          animation: flicker steps(100) var(--interval) 1s infinite;
 }/*# sourceMappingURL=CasinoCard.css.map */
