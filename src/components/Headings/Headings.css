@@ -27,22 +27,77 @@
           animation: flicker steps(100) var(--interval) 1s infinite;
 }
 .app-headings .app-headings-features {
-  width: 95%;
+  max-width: 90%;
   margin: 0 auto;
-  padding: 1vh;
   border-radius: 1rem;
   display: flex;
   flex-wrap: wrap;
-  font-size: 2vh;
+  font-size: 1.5vh;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
 }
 .app-headings .app-headings-features span {
-  text-align: left;
+  text-align: center;
   min-width: 50%;
   max-width: 50%;
   padding: 1vh;
 }
 .app-headings .app-headings-features span svg {
   transform: scale(1.3);
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .app-headings {
+    margin: 2vw 0 0 0;
+  }
+  .app-headings h1 {
+    margin: 0 0 3vw 0;
+    font-size: 5.5vw;
+  }
+  .app-headings .app-headings-features {
+    padding: 1vw;
+    font-size: 2.5vw;
+  }
+  .app-headings .app-headings-features span {
+    padding: 1vw;
+  }
+}
+@media (min-width: 768px) {
+  .app-headings {
+    margin: 2vh 0 0 0;
+    text-align: center;
+  }
+  .app-headings h1 {
+    margin: 0 0 3vh 0;
+    color: tomato;
+    font-family: var(--fontTourney);
+    font-size: 5.5vh;
+    text-shadow: 0 0 10px var(--color1), 0 0 20px var(--color2), 0 0 40px var(--color3), 0 0 80px var(--color4);
+    will-change: filter, color;
+    filter: saturate(60%);
+    --interval: 1s;
+    -webkit-animation: flicker steps(100) var(--interval) 1s infinite;
+            animation: flicker steps(100) var(--interval) 1s infinite;
+  }
+  .app-headings .app-headings-features {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1.5vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  .app-headings .app-headings-features span {
+    text-align: center;
+    min-width: 25%;
+    max-width: 25%;
+    padding: 1vh;
+  }
+  .app-headings .app-headings-features span svg {
+    transform: scale(1.3);
+  }
 }/*# sourceMappingURL=Headings.css.map */

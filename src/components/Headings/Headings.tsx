@@ -46,7 +46,7 @@ function Headings() {
           <AiOutlineMobile /> Mobile friendly
         </span>
         <span>
-          <MdDateRange /> Ostatni update: <div>{modifiedDate}</div>
+          <MdDateRange /> Ostatni update: {modifiedDate}
         </span>
         <span>
           <BsPerson /> Odwiedzin dzisiaj: {pageViews(hh, min)}

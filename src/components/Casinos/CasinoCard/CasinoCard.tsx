@@ -3,7 +3,28 @@ import Rating from "@mui/material/Rating";
 import { FiGift } from "react-icons/fi";
 import { MdStarHalf } from "react-icons/md";
 import { AiOutlineDollarCircle } from "react-icons/ai";
-import { Visa, Sepa, Rede } from "react-pay-icons";
+import { Icon } from "@iconify/react";
+import {
+  Visa,
+  Mastercard,
+  Maestro,
+  Blik,
+  Cirrus,
+  Bitcoin,
+  Usdt,
+  Eth,
+  Skrill,
+  Trustly,
+  Applepay,
+  Googlepay,
+  Paysafecard,
+} from "react-pay-icons";
+
+import PaymentIcon from "react-payment-icons";
+
+const iconStyle = {
+  height: '2vh'
+}
 
 type CasinoCardProps = {
   id: string;
@@ -16,20 +37,67 @@ type CasinoCardProps = {
   payment: string[];
 };
 
-const paymentIconStyles = {
-  minWidth: "5vh",
-};
-
 const PaymentMethod = (method: string) => {
   switch (method) {
     case "Visa":
-      return <Visa style={paymentIconStyles}/>;
+      return <img src='../../../../public/payment-icons/payment-visa.png' style={iconStyle}/>;
       break;
-    case "Sepa":
-      return <Sepa style={paymentIconStyles}/>;
+    case "Mastercard":
+      return <img src='../../../../public/payment-icons/payment-mastercard.png' style={iconStyle}/>;
       break;
-    case "Rede":
-      return <Rede style={paymentIconStyles}/>;
+    case "Maestro":
+      return <img src='../../../../public/payment-icons/payment-maestro.png' style={iconStyle}/>;
+      break;
+    case "Blik":
+      return <img src='../../../../public/payment-icons/payment-blik.png' style={iconStyle}/>;
+      break;
+    case "Cirrus":
+      return <img src='../../../../public/payment-icons/payment-cirrus.png' style={iconStyle}/>;
+      break;
+    case "Bitcoin":
+      return <img src='../../../../public/payment-icons/payment-btc.png' style={iconStyle}/>;
+      break;
+    case "Usdt":
+    return <img src='../../../../public/payment-icons/payment-usdt.png' style={iconStyle}/>;
+    break;
+    case "Eth":
+      return <img src='../../../../public/payment-icons/payment-eth.png' style={iconStyle}/>;
+      break;
+    case "Skrill":
+      return <img src='../../../../public/payment-icons/payment-skrill.png' style={iconStyle}/>;
+      break;
+    case "Trustly":
+      return <img src='../../../../public/payment-icons/payment-trustly.png' style={iconStyle}/>;
+      break;
+    case "ApplePay":
+      return <img src='../../../../public/payment-icons/payment-applepay.webp' style={iconStyle}/>;
+      break;
+    case "GooglePay":
+      return <img src='../../../../public/payment-icons/payment-googlepay.png' style={iconStyle}/>;
+      break;
+    case "Paysafecard":
+      return <img src='../../../../public/payment-icons/payment-paysafecard.png' style={iconStyle}/>;
+      break;
+      case "BankTransfer":
+      return <img src='../../../../public/payment-icons/payment-banktransfer.png' style={iconStyle}/>;
+      break;
+      case "Revolut":
+      return <img src='../../../../public/payment-icons/payment-revolut.png' style={iconStyle}/>;
+      break;
+      case "ecoPayz":
+      return <img src='../../../../public/payment-icons/payment-ecopayz.png' style={iconStyle}/>;
+      break;
+      case "eZeeWallet":
+      return <img src='../../../../public/payment-icons/payment-eZeeWallet.png' style={iconStyle}/>
+      break;
+      case "Jeton":
+      return <img src='../../../../public/payment-icons/payment-Jeton.png' style={iconStyle}/>;
+      break;
+      case "Neosurf":
+      return <img src='../../../../public/payment-icons/payment-Neosurf.png' style={iconStyle}/>;
+      break;
+      case "Neteller":
+      return <img src='../../../../public/payment-icons/payment-Neteller.png' style={iconStyle}/>;
       break;
     default:
       break;
@@ -46,7 +114,7 @@ function CasinoCard(props: { data: CasinoCardProps }) {
   return (
     <li className="app-casinos-casinocard">
       <div className="app-casinos-casinocard-avatar">
-        <img src="../../../../public/spin-city.png" />
+        <img src={imgSource} />
       </div>
 
       <div className="app-casinos-casinocard-info">
@@ -93,13 +161,20 @@ function CasinoCard(props: { data: CasinoCardProps }) {
             <span>METODY PŁATNOŚCI</span>
           </div>
           <div className="app-casinos-casinocard-info-payments-icons">
+            <div id='first'>
             {payment.map((item) => {
-              return <div key={payment.indexOf(item)}>{PaymentMethod(item)}
-              </div>;
+              return (
+                  <div key={payment.indexOf(item)}>{PaymentMethod(item)}</div>
+              );
             })}
+            </div>
           </div>
         </div>
-        <div onClick={() => handleClick(url)}className="app-casinos-casinocard-button">ODBIERZ BONUS</div>
+        <div
+          onClick={() => handleClick(url)}
+          className="app-casinos-casinocard-button">
+          ODBIERZ BONUS
+        </div>
       </div>
     </li>
   );
